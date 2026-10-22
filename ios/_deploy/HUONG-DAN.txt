@@ -1,0 +1,25 @@
+﻿ĐƯA TRANG CÀI NROHAN LÊN VPS
+
+1. Upload NroHan-VPS.zip vào thư mục gốc của website đang phục vụ tên miền.
+2. Giải nén tại thư mục gốc website. Chỉ các file thuộc đường dẫn /ios/ được thêm vào.
+   Không thay index.php/index.html của website cũ ở thư mục gốc nếu dùng /ios/.
+3. Mở https://nroha.fun/ios/ bằng Safari trên iPhone / iPad.
+
+URL manifest: https://nroha.fun/ios/manifest.plist
+URL IPA: https://nroha.fun/ios/ChienBinhVegeta_1.0_1792645622.ipa
+
+Đây là website tĩnh: không cần cài Node.js, PHP hoặc database.
+Có thể chép trực tiếp toàn bộ nội dung thư mục upload/ lên thư mục gốc website.
+Giữ DNS trỏ tới VPS. Không cần trỏ tên miền sang GitHub Pages.
+
+HTTPS phải hợp lệ; trang, manifest và IPA phải truy cập được không cần đăng nhập.
+Apache: gói đã có .htaccess khai báo MIME cho .plist và .ipa.
+Nginx: bảo đảm .plist có MIME text/xml, .ipa có MIME application/octet-stream.
+Nếu cần, thêm nội dung nginx-ios.conf vào khối server của website hiện tại,
+kiểm tra bằng nginx -t rồi reload Nginx. Cấu hình dùng root hiện có của website.
+Thư mục nên có quyền đọc file cho web server; thông thường thư mục 755, file 644.
+Không upload thư mục chungchi/, file .p12 hoặc mật khẩu lên website.
+
+IPA Chiến Binh Vegeta phiên bản 1.0 (46,8 MB).
+Profile bản hiện tại hết hạn ngày 05/11/2026.
+Chưa kiểm tra trực tiếp trên VPS của bạn hoặc cài trên iPhone thực tế.
