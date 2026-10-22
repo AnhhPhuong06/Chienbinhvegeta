@@ -5,8 +5,8 @@
    Không thay index.php/index.html của website cũ ở thư mục gốc nếu dùng /ios/.
 3. Mở https://chienbinhvegetablue.com/ios/ bằng Safari trên iPhone / iPad.
 
-URL manifest: https://chienbinhvegetablue.com/ios/manifest.plist
-URL IPA: https://chienbinhvegetablue.com/ios/ChienBinhVegeta_1.0_1792645622.ipa
+URL manifest cài đặt: https://anhhphuong06.github.io/Chienbinhvegeta/ios/manifest.xml
+URL IPA cài đặt: https://anhhphuong06.github.io/Chienbinhvegeta/ios/ChienBinhVegeta_1.0_1792645622.ipa
 
 Đây là website tĩnh: không cần cài Node.js, PHP hoặc database.
 Có thể chép trực tiếp toàn bộ nội dung thư mục upload/ lên thư mục gốc website.
