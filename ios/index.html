@@ -43,8 +43,6 @@
     .specs dd { margin: 0; font-size: 15px; font-weight: 650; white-space: nowrap; }
     .install-options { display: grid; gap: 12px; width: 340px; max-width: 100%; }
     .install { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; width: 100%; max-width: 100%; padding: 16px 22px; border-radius: 14px; background: var(--accent); color: #231b11; box-shadow: 0 6px 0 #9a591a, 0 16px 32px #ff950011; transition: transform .18s, background .18s, box-shadow .18s; }
-    .install--domain { background: #20271f; color: var(--text); border: 1px solid #ffffff2b; box-shadow: 0 5px 0 #101410, 0 16px 32px #0002; }
-    .install--domain:hover { background: #2a3428; box-shadow: 0 7px 0 #101410, 0 18px 32px #0003; }
     .install:hover { background: #ffbd69; transform: translateY(-2px); box-shadow: 0 8px 0 #9a591a, 0 18px 32px #ff950020; }
     .install:active { transform: translateY(4px); box-shadow: 0 2px 0 #9a591a; }
     .install strong, .install small { display: block; }
@@ -174,10 +172,6 @@
         <div class="install-options" aria-label="Chọn nguồn cài đặt">
           <a class="install" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fanhhphuong06.github.io%2FChienbinhvegeta%2Fios%2Fmanifest.xml">
             <span><strong>Cài qua GitHub Pages</strong><small>Nguồn đang truy cập được</small></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
-          </a>
-          <a class="install install--domain" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fchienbinhvegetablue.com%2Fios%2Fmanifest.plist">
-            <span><strong>Cài qua tên miền riêng</strong><small>Dùng khi Cloudflare cho phép tải</small></span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
           </a>
         </div>
