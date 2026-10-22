@@ -3,10 +3,10 @@
 1. Upload NroHan-VPS.zip vào thư mục gốc của website đang phục vụ tên miền.
 2. Giải nén tại thư mục gốc website. Chỉ các file thuộc đường dẫn /ios/ được thêm vào.
    Không thay index.php/index.html của website cũ ở thư mục gốc nếu dùng /ios/.
-3. Mở https://nroha.fun/ios/ bằng Safari trên iPhone / iPad.
+3. Mở https://chienbinhvegetablue.com/ios/ bằng Safari trên iPhone / iPad.
 
-URL manifest: https://nroha.fun/ios/manifest.plist
-URL IPA: https://nroha.fun/ios/ChienBinhVegeta_1.0_1792645622.ipa
+URL manifest: https://chienbinhvegetablue.com/ios/manifest.plist
+URL IPA: https://chienbinhvegetablue.com/ios/ChienBinhVegeta_1.0_1792645622.ipa
 
 Đây là website tĩnh: không cần cài Node.js, PHP hoặc database.
 Có thể chép trực tiếp toàn bộ nội dung thư mục upload/ lên thư mục gốc website.
