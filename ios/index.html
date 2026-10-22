@@ -41,19 +41,13 @@
     .specs div:first-child { padding-left: 0; border: 0; }
     .specs dt { color: #a4ac9e; font-size: 11px; margin-bottom: 7px; }
     .specs dd { margin: 0; font-size: 15px; font-weight: 650; white-space: nowrap; }
-    .install-options { display: grid; gap: 12px; width: 340px; max-width: 100%; }
-    .install { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; width: 100%; max-width: 100%; padding: 16px 22px; border-radius: 14px; background: var(--accent); color: #231b11; box-shadow: 0 6px 0 #9a591a, 0 16px 32px #ff950011; transition: transform .18s, background .18s, box-shadow .18s; }
+    .install { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 70px; width: 340px; max-width: 100%; padding: 16px 22px; border-radius: 14px; background: var(--accent); color: #231b11; box-shadow: 0 6px 0 #9a591a, 0 16px 32px #ff950011; transition: transform .18s, background .18s, box-shadow .18s; }
     .install:hover { background: #ffbd69; transform: translateY(-2px); box-shadow: 0 8px 0 #9a591a, 0 18px 32px #ff950020; }
     .install:active { transform: translateY(4px); box-shadow: 0 2px 0 #9a591a; }
     .install strong, .install small { display: block; }
     .install strong { font-size: 17px; font-weight: 800; }
     .install small { margin-top: 4px; font-size: 11px; color: #63411e; }
     .install svg { width: 24px; height: 24px; }
-    .secondary { display: flex; align-items: center; gap: 18px; margin-top: 24px; color: #b6bdaf; font-size: 12px; }
-    .download { display: inline-flex; align-items: center; gap: 6px; padding: 8px 0; color: #dedfd4; }
-    .download:hover { color: var(--accent); }
-    .download svg { width: 13px; height: 13px; }
-    .secondary .divider { width: 3px; height: 3px; background: #687260; border-radius: 50%; }
     .visual { position: relative; min-width: 0; height: 490px; display: flex; justify-content: center; align-items: center; isolation: isolate; }
     .orbit { position: absolute; width: 430px; height: 430px; max-width: 100%; border: 1px solid #a4bd7c28; border-radius: 50%; z-index: -1; }
     .orbit::before { position: absolute; content: ""; inset: 27px; border: 1px dashed #a4bd7c20; border-radius: 50%; }
@@ -119,7 +113,7 @@
       .specs dt { font-size: 10px; }
       .specs dd { font-size: 14px; }
       .install { width: 100%; }
-      .secondary { justify-content: center; gap: 16px; margin-top: 20px; }
+      .install { width: 100%; }
       .visual { height: 400px; width: 100%; max-width: 420px; margin: 6px auto 0; }
       .poster { width: 275px; max-width: 78%; border-radius: 24px; }
       .poster figcaption { padding: 14px 7px; font-size: 9px; }
@@ -144,7 +138,7 @@
       footer { padding: 23px 0 30px; align-items: flex-start; }
       footer p { max-width: 200px; font-size: 9px; }
     }
-    @media (max-width: 350px) { .wrap { width: calc(100% - 36px); } .specs div { padding: 0 17px; } .secondary { font-size: 11px; gap: 10px; } .visual { height: 350px; } .orbit { height: 290px; width: 290px; } .edition { top: 0; } }
+    @media (max-width: 350px) { .wrap { width: calc(100% - 36px); } .specs div { padding: 0 17px; } .visual { height: 350px; } .orbit { height: 290px; width: 290px; } .edition { top: 0; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .install { transition: none; } }
   </style>
 </head>
@@ -169,18 +163,10 @@
           <div><dt>Dung lượng</dt><dd>46,8 MB</dd></div>
           <div><dt>Tương thích</dt><dd>iOS 10+</dd></div>
         </dl>
-        <div class="install-options" aria-label="Chọn nguồn cài đặt">
-          <a class="install" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fanhhphuong06.github.io%2FChienbinhvegeta%2Fios%2Fmanifest.xml">
-            <span><strong>Cài qua GitHub Pages</strong><small>Nguồn đang truy cập được</small></span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
-          </a>
-        </div>
-        <div class="secondary">
-          <a class="download" href="ChienBinhVegeta_1.0_1792645622.ipa">Tải file IPA
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
-          </a>
-          <span class="divider" aria-hidden="true"></span><span>Không cần đăng nhập</span>
-        </div>
+        <a class="install" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fanhhphuong06.github.io%2FChienbinhvegeta%2Fios%2Fmanifest.xml">
+          <span><strong>Cài đặt ngay</strong><small>Chiến Binh Vegeta · iPhone &amp; iPad</small></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
+        </a>
       </div>
       <div class="visual">
         <div class="orbit" aria-hidden="true"></div>
