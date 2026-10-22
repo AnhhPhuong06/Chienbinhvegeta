@@ -163,7 +163,7 @@
           <div><dt>Dung lượng</dt><dd>46,8 MB</dd></div>
           <div><dt>Tương thích</dt><dd>iOS 10+</dd></div>
         </dl>
-        <a class="install" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fanhhphuong06.github.io%2FChienbinhvegeta%2Fios%2Fmanifest.xml">
+        <a class="install" id="installButton" href="itms-services://?action=download-manifest&amp;url=https%3A%2F%2Fanhhphuong06.github.io%2FChienbinhvegeta%2Fios%2Fmanifest.xml">
           <span><strong>Cài đặt ngay</strong><small>Chiến Binh Vegeta · iPhone &amp; iPad</small></span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></svg>
         </a>
@@ -184,7 +184,7 @@
       <div class="section-title"><h2 id="guide-title">Vào game trong 3 bước.</h2><p>Lần đầu cài đặt? Bắt đầu từ đây.</p></div>
       <ol class="steps">
         <li><span class="step-number" aria-hidden="true">01</span><div><h3>Mở bằng Safari</h3><p>Mở link trang này trên Safari của iPhone hoặc iPad để dùng nút cài đặt.</p></div></li>
-        <li><span class="step-number" aria-hidden="true">02</span><div><h3>Chạm để cài đặt</h3><p>Nhấn “Cài đặt Chiến Binh Vegeta”, xác nhận rồi về màn hình chính để theo dõi tiến trình.</p></div></li>
+        <li><span class="step-number" aria-hidden="true">02</span><div><h3>Chạm để cài đặt</h3><p>Nhấn “Cài đặt ngay”, xác nhận rồi về màn hình chính để theo dõi tiến trình.</p></div></li>
         <li><span class="step-number" aria-hidden="true">03</span><div><h3>Tin cậy nhà phát triển</h3><p>Nếu được yêu cầu, vào Cài đặt → Cài đặt chung → VPN &amp; Quản lý thiết bị để xác nhận tin cậy.</p></div></li>
       </ol>
     </section>
@@ -200,5 +200,15 @@
     </section>
   </main>
   <footer class="wrap"><span class="footer-brand">CHIẾN BINH VEGETA / iOS</span><p>Phiên bản 1.0 · 46,8 MB<br>Cài đặt trên iPhone và iPad qua Safari.</p></footer>
+  <script>
+    const installButton = document.getElementById("installButton");
+    if (installButton) {
+      const isCustomDomain = window.location.hostname.toLowerCase() === "chienbinhvegetablue.com";
+      const manifestUrl = isCustomDomain
+        ? "https://chienbinhvegetablue.com/ios/manifest.plist"
+        : "https://anhhphuong06.github.io/Chienbinhvegeta/ios/manifest.xml";
+      installButton.href = `itms-services://?action=download-manifest&url=${encodeURIComponent(manifestUrl)}`;
+    }
+  </script>
 </body>
 </html>
