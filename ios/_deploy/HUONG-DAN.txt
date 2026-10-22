@@ -1,27 +1,30 @@
-﻿ĐƯA TRANG CÀI NROHAN LÊN VPS
+GÓI WEB CÀI ĐẶT CHIẾN BINH VEGETA CHO VPS
 
-1. Upload NroHan-VPS.zip vào thư mục gốc của website đang phục vụ tên miền.
-2. Giải nén tại thư mục gốc website. Chỉ các file thuộc đường dẫn /ios/ được thêm vào.
-   Không thay index.php/index.html của website cũ ở thư mục gốc nếu dùng /ios/.
-3. Mở https://chienbinhvegetablue.com/ios/ bằng Safari trên iPhone / iPad.
+CÀI LÊN WEBSITE
+1. Giải nén ChienBinhVegeta-VPS.zip trên máy tính.
+2. Chép thư mục ios bên trong gói vào document root của website trên VPS.
+   Nếu website đã có thư mục ios, hãy sao lưu trước khi thay thế.
+3. Bảo đảm website có HTTPS hợp lệ, rồi mở:
+   https://chienbinhvegetablue.com/ios/
+4. Trên iPhone hoặc iPad, mở trang bằng Safari và chạm “Cài đặt ngay”.
 
-Manifest GitHub Pages: https://anhhphuong06.github.io/Chienbinhvegeta/ios/manifest.xml
-Manifest tên miền riêng: https://chienbinhvegetablue.com/ios/manifest.plist
-IPA GitHub Pages: https://anhhphuong06.github.io/Chienbinhvegeta/ios/ChienBinhVegeta_1.0_1792645622.ipa
-IPA tên miền riêng: https://chienbinhvegetablue.com/ios/ChienBinhVegeta_1.0_1792645622.ipa
+CÁCH HOẠT ĐỘNG
+Trang cài đặt được VPS của bạn phục vụ. Nút cài đặt lấy manifest và IPA từ GitHub Pages:
+https://anhhphuong06.github.io/Chienbinhvegeta/ios/manifest.xml
+https://anhhphuong06.github.io/Chienbinhvegeta/ios/ChienBinhVegeta_1.0_1792645622.ipa
+Vì vậy cần giữ GitHub Pages bật và không đổi/xóa các file cài đặt ở đó.
+DNS tên miền vẫn trỏ về VPS. Không cần chuyển website sang GitHub Pages.
 
-Đây là website tĩnh: không cần cài Node.js, PHP hoặc database.
-Có thể chép trực tiếp toàn bộ nội dung thư mục upload/ lên thư mục gốc website.
-Giữ DNS trỏ tới VPS. Không cần trỏ tên miền sang GitHub Pages.
+CẤU HÌNH SERVER
+Đây là website tĩnh; không cần Node.js, PHP hoặc database.
+Apache: file .htaccess trong thư mục ios khai báo MIME cho XML, plist và IPA.
+Nginx: nếu cần, thêm nội dung nginx-ios.conf vào khối server {} hiện tại.
+Cấu hình Nginx dùng document root đang có; kiểm tra bằng nginx -t trước khi reload.
+Web server cần quyền đọc thư mục và file (thường thư mục 755, file 644).
+Nếu Cloudflare đang bật thử thách trình duyệt cho /ios/*, hãy cho phép đường dẫn này
+để người dùng mở được trang cài đặt.
 
-HTTPS phải hợp lệ; trang, manifest và IPA phải truy cập được không cần đăng nhập.
-Apache: gói đã có .htaccess khai báo MIME cho .plist và .ipa.
-Nginx: bảo đảm .plist có MIME text/xml, .ipa có MIME application/octet-stream.
-Nếu cần, thêm nội dung nginx-ios.conf vào khối server của website hiện tại,
-kiểm tra bằng nginx -t rồi reload Nginx. Cấu hình dùng root hiện có của website.
-Thư mục nên có quyền đọc file cho web server; thông thường thư mục 755, file 644.
-Không upload thư mục chungchi/, file .p12 hoặc mật khẩu lên website.
-
-IPA Chiến Binh Vegeta phiên bản 1.0 (46,8 MB).
-Profile bản hiện tại hết hạn ngày 05/11/2026.
-Chưa kiểm tra trực tiếp trên VPS của bạn hoặc cài trên iPhone thực tế.
+LƯU Ý
+Không đưa thư mục chungchi/, file .p12 hoặc mật khẩu lên web.
+IPA phiên bản 1.0, dung lượng 46,8 MB. Profile hiện tại hết hạn ngày 05/11/2026.
+Chưa có thông tin truy cập VPS nên gói này chưa được chép trực tiếp lên máy chủ.

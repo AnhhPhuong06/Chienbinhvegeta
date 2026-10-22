@@ -1,4 +1,5 @@
 <IfModule mod_mime.c>
+  AddType application/xml .xml
   AddType text/xml .plist
   AddType application/octet-stream .ipa
 </IfModule>
